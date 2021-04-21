@@ -1,0 +1,39 @@
+.quillWrapper {
+  border-radius: $border-radius !important;
+  .ql-toolbar {
+    border: 1px solid $gray-400 !important;
+    border-top-left-radius: $border-radius !important;
+    border-top-right-radius: $border-radius !important;
+  }
+  .ql-container {
+    border-bottom-color: $gray-400 !important;
+    border-left-color: $gray-400 !important;
+    border-right-color: $gray-400 !important;
+    border-bottom-left-radius: $border-radius !important;
+    border-bottom-right-radius: $border-radius !important;
+  }
+  &:focus-within {
+    box-shadow: $input-box-shadow, $input-focus-box-shadow;
+    .ql-toolbar {
+      border: 1px solid $input-focus-border-color !important;
+    }
+    .ql-container {
+      border-bottom-color: $input-focus-border-color !important;
+      border-left-color: $input-focus-border-color !important;
+      border-right-color: $input-focus-border-color !important;
+    }
+  }
+  &.is-invalid {
+    &:focus-within {
+      box-shadow: 0 0 0 0.2rem rgba($danger, 0.25) !important;
+    }
+    .ql-toolbar {
+      border: 1px solid $danger !important;
+    }
+    .ql-container {
+      border-bottom-color: $danger !important;
+      border-left-color: $danger !important;
+      border-right-color: $danger !important;
+    }
+  }
+}

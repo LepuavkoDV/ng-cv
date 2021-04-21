@@ -1,0 +1,10 @@
+// progress bars
+$progressbar-bar-background: $primary;
+$progressbar-background: $gray-200;
+@import "./node_modules/vue-progressbar-component/src/scss/progressbar";
+.progressbar {
+  @extend .progressbar;
+  margin-bottom: .5rem;
+  height: 1.5rem;
+  &-bar {}
+}

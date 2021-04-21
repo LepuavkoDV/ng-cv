@@ -1,0 +1,22 @@
+$border-size: 5px;
+
+.notification-wrapper {
+  padding: .25em !important;
+}
+.my-notification {
+  padding: .5em;
+  margin: 0 0 1em 0;
+  font-size: 1em;
+  color: $light;
+  background-color: $primary !important;
+  border-radius: $border-radius;
+  text-align: center !important;
+  opacity: 1;
+  box-shadow: 0px 0px 0px 0.2rem fade-out($primary, 0.25) !important;
+  &.error {
+    box-shadow: 0px 0px 0px 0.2rem fade-out($danger, 0.25) !important;
+  }
+  &.success {
+    box-shadow: 0px 0px 0px 0.2rem fade-out($success, 0.25) !important;
+  }
+}
