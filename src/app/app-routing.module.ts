@@ -14,7 +14,7 @@ export const routes: RoutesV2 = [
   { title: 'О себе', path: 'about', component: AboutComponent },
   { title: 'Навыки', path: 'skills', component: SkillsComponent },
   { title: 'Обратная связь', path: 'contact-me', component: ContactMeComponent },
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '', redirectTo: 'about', pathMatch: 'full' },
 ];
 
 @NgModule({
