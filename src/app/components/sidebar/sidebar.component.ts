@@ -13,7 +13,7 @@ export class SidebarComponent implements OnInit {
     },
     {
       title: 'Навыки',
-      to: 'my-skills'
+      to: 'skills'
     },
     // {
     // title: 'Мои работы',
