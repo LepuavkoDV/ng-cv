@@ -5,11 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AboutComponent } from './pages/about/about.component';
+import { SkillsComponent } from './pages/skills/skills.component';
+import { ContactMeComponent } from './pages/contact-me/contact-me.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent
+    SidebarComponent,
+    AboutComponent,
+    SkillsComponent,
+    ContactMeComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-
+   navLinks = [
+    {
+      title: 'О себе',
+      to: '/'
+    },
+    {
+      title: 'Навыки',
+      to: 'my-skills'
+    },
+    // {
+    // title: 'Мои работы',
+    // to: 'my-works'
+    // },
+    {
+      title: 'Обратная связь',
+      to: 'contact-me'
+    }
+  ];
   constructor() { }
 
   ngOnInit(): void {
