@@ -25,7 +25,7 @@ class Server {
     this.app.use(cors({ origin: '*' }))
     this.app.use(bodyParer.json())
     this.app.use(history({}))
-    this.app.use(serveStatic(path.join(__dirname, '../..', 'dist')))
+    this.app.use(serveStatic(path.join(__dirname, '../..', 'dist/ng-cv')))
 
     this.app.use('/api/v1', api)
 

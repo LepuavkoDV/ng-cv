@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { SidebarComponent } from './core/components/sidebar/sidebar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AboutComponent } from './pages/about/about.component';
-import { SkillsComponent } from './pages/skills/skills.component';
-import { ContactMeComponent } from './pages/contact-me/contact-me.component';
+import { AboutComponent } from './modules/home/pages/about/about.component';
+import { SkillsComponent } from './modules/home/pages/skills/skills.component';
+import { ContactMeComponent } from './modules/home/pages/contact-me/contact-me.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ContactMeComponent } from './pages/contact-me/contact-me.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent]

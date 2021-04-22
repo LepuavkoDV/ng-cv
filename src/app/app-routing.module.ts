@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Route } from '@angular/router';
-import { AboutComponent } from './pages/about/about.component';
-import { SkillsComponent } from './pages/skills/skills.component';
-import { ContactMeComponent } from './pages/contact-me/contact-me.component';
+import { AboutComponent } from './modules/home/pages/about/about.component';
+import { SkillsComponent } from './modules/home/pages/skills/skills.component';
+import { ContactMeComponent } from './modules/home/pages/contact-me/contact-me.component';
 
 export interface RouteV2 extends Route {
   title?: string;
