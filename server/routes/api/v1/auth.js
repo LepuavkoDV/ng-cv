@@ -9,8 +9,8 @@ const AuthController = new Auth()
 //   AuthController.Register(req, res)
 // })
 
-auth.post('/login', (req, res, next) => {
-  AuthController.Login(req, res, next)
-})
+// auth.post('/login', (req, res, next) => {
+//   AuthController.Login(req, res, next)
+// })
 
 export default auth

@@ -1,8 +1,8 @@
 import dotenv from 'dotenv'
 import express from 'express'
 import path from 'path'
-import serveStatic from 'serve-static'
-import history from 'connect-history-api-fallback'
+// import serveStatic from 'serve-static'
+// import history from 'connect-history-api-fallback'
 import cors from 'cors'
 import bodyParer from 'body-parser'
 import Debug from 'debug'
@@ -24,8 +24,8 @@ class Server {
     this.app.use(morgan('dev'))
     this.app.use(cors({ origin: '*' }))
     this.app.use(bodyParer.json())
-    this.app.use(history({}))
-    this.app.use(serveStatic(path.join(__dirname, '../..', 'dist/ng-cv')))
+    // this.app.use(history({}))
+    // this.app.use(serveStatic(path.join(__dirname, '../..', 'dist/ng-cv')))
 
     this.app.use('/api/v1', api)
 
@@ -40,6 +40,10 @@ class Server {
     })
 
     this.app.listen(this.port, () => this.debug('WebServer listening on port:', this.port))
+  
+    this.app.get("/123", (req, res) => {
+      res.json({ message: "Welcome to bezkoder application." });
+    });
   }
 
   showApiEndpoints () {
