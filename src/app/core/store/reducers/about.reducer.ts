@@ -3,11 +3,11 @@ import { Action, createReducer, on } from '@ngrx/store';
 
 export const aboutFeatureKey = 'about';
 
-export interface State {
+export interface AboutState {
 
 }
 
-export const initialState: State = {
+export const initialState: AboutState = {
 
 };
 
