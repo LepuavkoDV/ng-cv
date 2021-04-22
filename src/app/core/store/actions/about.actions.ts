@@ -13,7 +13,7 @@ export const loadAbouts = createAction(
 
 export const loadAboutsSuccess = createAction(
   AboutActionTypes.loadAboutsSuccess,
-  props<{ data: IContent[] }>()
+  props<{ contents: IContent[] }>()
 );
 
 export const loadAboutsFailure = createAction(
