@@ -1,15 +1,22 @@
 import { createAction, props } from '@ngrx/store';
+import { IContent } from '../../../shared/models/icontent';
+
+export enum AboutActionTypes {
+  loadAbouts = '[About] Load Abouts',
+  loadAboutsSuccess = '[About] Load Abouts Success',
+  loadAboutsFailure = '[About] Load Abouts Failure',
+}
 
 export const loadAbouts = createAction(
-  '[About] Load Abouts'
+  AboutActionTypes.loadAbouts,
 );
 
 export const loadAboutsSuccess = createAction(
-  '[About] Load Abouts Success',
-  props<{ data: any }>()
+  AboutActionTypes.loadAboutsSuccess,
+  props<{ contents: IContent[] }>()
 );
 
 export const loadAboutsFailure = createAction(
-  '[About] Load Abouts Failure',
+  AboutActionTypes.loadAboutsFailure,
   props<{ error: any }>()
 );
