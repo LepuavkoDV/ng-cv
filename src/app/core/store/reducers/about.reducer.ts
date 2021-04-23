@@ -17,7 +17,7 @@ export const initialState: AboutState = {
 };
 
 
-export const reducer = createReducer(
+export const aboutPageState = createReducer(
   initialState,
   on(loadAboutsSuccess, (state, { contents }) => {
     const about = contents.find(content => content.section === 'about');

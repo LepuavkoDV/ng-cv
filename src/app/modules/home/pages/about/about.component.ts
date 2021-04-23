@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AboutService } from '../../../../core/services/about.service';
+import { Store } from '@ngrx/store';
+import { AboutActionTypes } from '../../../../core/store/actions/about.actions';
 
 @Component({
   selector: 'app-about',
@@ -8,10 +9,10 @@ import { AboutService } from '../../../../core/services/about.service';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(private aboutService: AboutService) { }
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
-    this.aboutService.getAboutPage();
+    this.store.dispatch({ type: AboutActionTypes.loadAbouts });
   }
 
 }

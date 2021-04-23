@@ -10,6 +10,12 @@ import { AboutComponent } from './modules/home/pages/about/about.component';
 import { SkillsComponent } from './modules/home/pages/skills/skills.component';
 import { ContactMeComponent } from './modules/home/pages/contact-me/contact-me.component';
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+
+import { aboutPageState } from './core/store/reducers/about.reducer';
+import { AboutEffects } from './core/store/effects/about.effects';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,13 @@ import { StoreModule } from '@ngrx/store';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({
+      aboutPageState
+    }, {}),
+    EffectsModule.forRoot([
+      AboutEffects,
+    ]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]
