@@ -1,8 +1,8 @@
 <section class="resume-section p-3 p-lg-5 d-flex flex-column slow-fadeIn">
   <div class="my-auto">
-    <section class="content" [innerHTML]="headline$ | async"></section>
-    <section class="content" [innerHTML]="about$ | async"></section>
-    <section class="content" [innerHTML]="lookingFor$ | async"></section>
+    <section class="content" [innerHTML]="(headline$ | async)?.content"></section>
+    <section class="content" [innerHTML]="(about$ | async)?.content"></section>
+    <section class="content" [innerHTML]="(lookingFor$ | async)?.content"></section>
     <ul class="list-inline list-social-icons mb-0">
       <li class="list-inline-item">
         <a href="https://github.com/LepuavkoDV" target="_blank">

@@ -12,9 +12,9 @@ import { selectAbout, selectHeadline, selectLookingFor } from '../../../../core/
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  about$: Observable<string>;
-  headline$: Observable<string>;
-  lookingFor$: Observable<string>;
+  about$: Observable<IContent>;
+  headline$: Observable<IContent>;
+  lookingFor$: Observable<IContent>;
 
   constructor(private store: Store<AboutState>) { }
 

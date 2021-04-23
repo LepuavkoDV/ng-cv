@@ -3,16 +3,16 @@ import { AboutState, aboutFeatureKey } from '../reducers/about.reducer';
 
 export const selectAbout = createSelector(
   createFeatureSelector<AboutState>(aboutFeatureKey),
-  state => state.about.content,
+  state => state.about,
 );
 
 export const selectHeadline = createSelector(
   createFeatureSelector<AboutState>(aboutFeatureKey),
-  state => state.headline.content,
+  state => state.headline,
 );
 
 export const selectLookingFor = createSelector(
   createFeatureSelector<AboutState>(aboutFeatureKey),
-  state => state.lookingFor.content,
+  state => state.lookingFor,
 );
 
