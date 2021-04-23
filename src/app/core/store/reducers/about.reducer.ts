@@ -19,15 +19,11 @@ export const initialState: AboutState = {
 
 export const AboutState = createReducer(
   initialState,
-  on(loadAboutsSuccess, (state, { contents }) => {
-    const about = contents.find(content => content.section === 'about');
-    const headline = contents.find(content => content.section === 'headline');
-    const lookingFor = contents.find(content => content.section === 'lookingfor');
-    return {
-      about,
-      headline,
-      lookingFor,
-    };
-  }),
+  on(loadAboutsSuccess, (state, { contents }) => ({
+      about: contents.find(content => content.section === 'about'),
+      headline: contents.find(content => content.section === 'headline'),
+      lookingFor: contents.find(content => content.section === 'lookingfor'),
+    })
+  ),
 );
 
