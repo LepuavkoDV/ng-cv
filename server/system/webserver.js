@@ -40,10 +40,6 @@ class Server {
     })
 
     this.app.listen(this.port, () => this.debug('WebServer listening on port:', this.port))
-  
-    this.app.get("/123", (req, res) => {
-      res.json({ message: "Welcome to bezkoder application." });
-    });
   }
 
   showApiEndpoints () {
