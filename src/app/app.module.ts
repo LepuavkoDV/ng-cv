@@ -14,7 +14,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 
-import { aboutPageState } from './core/store/reducers/about.reducer';
+import { AboutState } from './core/store/reducers/about.reducer';
 import { AboutEffects } from './core/store/effects/about.effects';
 
 @NgModule({
@@ -31,7 +31,7 @@ import { AboutEffects } from './core/store/effects/about.effects';
     NgbModule,
     HttpClientModule,
     StoreModule.forRoot({
-      aboutPageState
+      AboutState
     }, {}),
     EffectsModule.forRoot([
       AboutEffects,

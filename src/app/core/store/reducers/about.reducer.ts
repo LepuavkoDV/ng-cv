@@ -2,7 +2,7 @@ import { Action, createReducer, on } from '@ngrx/store';
 import { IContent } from '../../../shared/models/icontent';
 import { loadAboutsSuccess } from '../actions/about.actions';
 
-export const aboutFeatureKey = 'about';
+export const aboutFeatureKey = 'AboutState';
 
 export interface AboutState {
   about: IContent;
@@ -17,7 +17,7 @@ export const initialState: AboutState = {
 };
 
 
-export const aboutPageState = createReducer(
+export const AboutState = createReducer(
   initialState,
   on(loadAboutsSuccess, (state, { contents }) => {
     const about = contents.find(content => content.section === 'about');
