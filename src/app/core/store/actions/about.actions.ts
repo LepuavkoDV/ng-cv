@@ -2,9 +2,9 @@ import { createAction, props } from '@ngrx/store';
 import { IContent } from '../../../shared/models/icontent';
 
 export enum AboutActionTypes {
-  loadAbouts = '[About] Load Abouts',
-  loadAboutsSuccess = '[About] Load Abouts Success',
-  loadAboutsFailure = '[About] Load Abouts Failure',
+  loadAbouts = '[About] Loading',
+  loadAboutsSuccess = '[About] Loading Success',
+  loadAboutsFailure = '[About] Loading Failure',
 }
 
 export const loadAbouts = createAction(
