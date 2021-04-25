@@ -4,11 +4,11 @@ import Groups from '../../../controllers/groups.controller'
 
 const api = express.Router()
 
-// api.get('/', (req, res) => {
-//   Groups.list().then(result => {
-//     res.status(result.status).send(result.data)
-//   })
-// })
+api.get('/', (req, res) => {
+  Groups.list().then(result => {
+    res.status(result.status).send(result.data)
+  })
+})
 //
 // api.post('/', passport.authenticate('jwt', { session: false }), (req, res) => {
 //   Groups.add(req.body).then(result => {
