@@ -16,7 +16,6 @@ export const initialState: AboutState = {
   lookingFor: null,
 };
 
-
 export const AboutState = createReducer(
   initialState,
   on(loadAboutsSuccess, (state, { contents }) => ({
